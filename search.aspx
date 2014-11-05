@@ -27,14 +27,13 @@
         <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="playerID" DataSourceID="sql_playerFacts">
             <Columns>
-                <asp:BoundField DataField="playerID" HeaderText="playerID" InsertVisible="False" ReadOnly="True" SortExpression="playerID" />
-                <asp:BoundField DataField="player_name" HeaderText="player_name" SortExpression="player_name" />
-                <asp:BoundField DataField="player_position" HeaderText="player_position" SortExpression="player_position" />
-                <asp:BoundField DataField="player_team" HeaderText="player_team" SortExpression="player_team" />
-                <asp:BoundField DataField="player_totalpoints" HeaderText="player_totalpoints" SortExpression="player_totalpoints" />
-                <asp:BoundField DataField="player_avgpoints" HeaderText="player_avgpoints" SortExpression="player_avgpoints" />
-                <asp:BoundField DataField="player_totaltouchdowns" HeaderText="player_totaltouchdowns" SortExpression="player_totaltouchdowns" />
-                <asp:BoundField DataField="player_totalyards" HeaderText="player_totalyards" SortExpression="player_totalyards" />
+                <asp:BoundField DataField="player_name" HeaderText="Player Name" SortExpression="player_name" />
+                <asp:BoundField DataField="player_position" HeaderText="Position" SortExpression="player_position" />
+                <asp:BoundField DataField="player_team" HeaderText="NFL Team" SortExpression="player_team" />
+                <asp:BoundField DataField="player_totalpoints" HeaderText="Total Fantasy Points" SortExpression="player_totalpoints" />
+                <asp:BoundField DataField="player_avgpoints" HeaderText="Average Fantasy Points" SortExpression="player_avgpoints" />
+                <asp:BoundField DataField="player_totaltouchdowns" HeaderText="Touchdowns" SortExpression="player_totaltouchdowns" />
+                <asp:BoundField DataField="player_totalyards" HeaderText="Yards" SortExpression="player_totalyards" />
             </Columns>
         </asp:GridView>
         <% End If%>
