@@ -25,7 +25,13 @@
         </div>
 
         <div id="right_header">
-            <img src="./css/logo.png" height="150px" />
+            
+
+
+            <asp:Image ID="Logo" runat="server" Height="150px" ImageUrl="~/css/logo.png" Width="216px" />
+            
+
+
             </div>
 
             <div id="menu">
