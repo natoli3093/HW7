@@ -2,15 +2,15 @@
 Partial Class PlayerDetails
     Inherits System.Web.UI.Page
 
-    Protected Sub DetailsView1_ItemInserted(sender As Object, e As DetailsViewInsertedEventArgs) Handles DetailsView1.ItemInserted
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        Response.Redirect("~/ViewAllPlayers.aspx")
+        FormView1.Focus()
 
     End Sub
 
-    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Protected Sub FormView1_ItemInserted(sender As Object, e As FormViewInsertedEventArgs) Handles FormView1.ItemInserted
 
-        DetailsView1.Focus()
+        Response.Redirect("~/ViewAllPlayers.aspx")
 
     End Sub
 End Class

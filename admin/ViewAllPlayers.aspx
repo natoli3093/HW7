@@ -35,7 +35,6 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewPlayer.aspx">Add a New Player</asp:HyperLink>
         <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="playerID" DataSourceID="sql_playerFacts">
             <Columns>
                 <asp:BoundField DataField="player_name" HeaderText="Player Name" SortExpression="player_name" />

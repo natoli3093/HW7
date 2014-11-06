@@ -35,18 +35,125 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="playerID" DataSourceID="sql_playerData" Height="50px" Width="397px" DefaultMode="Insert">
-            <Fields>
-                <asp:BoundField DataField="player_name" HeaderText="Player Name" SortExpression="player_name" />
-                <asp:BoundField DataField="player_position" HeaderText="Position" SortExpression="player_position" />
-                <asp:BoundField DataField="player_team" HeaderText="NFL Team" SortExpression="player_team" />
-                <asp:BoundField DataField="player_totalpoints" HeaderText="Total Fantasy Points" SortExpression="player_totalpoints" />
-                <asp:BoundField DataField="player_avgpoints" HeaderText="Average Fantasy Points" SortExpression="player_avgpoints" />
-                <asp:BoundField DataField="player_totaltouchdowns" HeaderText="Touchdowns" SortExpression="player_totaltouchdowns" />
-                <asp:BoundField DataField="player_totalyards" HeaderText="Yards" SortExpression="player_totalyards" />
-                <asp:CommandField ShowInsertButton="True" ButtonType="Button" />
-            </Fields>
-        </asp:DetailsView>
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="playerID" DataSourceID="sql_playerData" DefaultMode="Insert">
+            <EditItemTemplate>
+                playerID:
+                <asp:Label ID="playerIDLabel1" runat="server" Text='<%# Eval("playerID") %>' />
+                <br />
+                player_name:
+                <asp:TextBox ID="player_nameTextBox" runat="server" Text='<%# Bind("player_name") %>' />
+                <br />
+                player_position:
+                <asp:TextBox ID="player_positionTextBox" runat="server" Text='<%# Bind("player_position") %>' />
+                <br />
+                player_team:
+                <asp:TextBox ID="player_teamTextBox" runat="server" Text='<%# Bind("player_team") %>' />
+                <br />
+                player_totalpoints:
+                <asp:TextBox ID="player_totalpointsTextBox" runat="server" Text='<%# Bind("player_totalpoints") %>' />
+                <br />
+                player_avgpoints:
+                <asp:TextBox ID="player_avgpointsTextBox" runat="server" Text='<%# Bind("player_avgpoints") %>' />
+                <br />
+                player_totaltouchdowns:
+                <asp:TextBox ID="player_totaltouchdownsTextBox" runat="server" Text='<%# Bind("player_totaltouchdowns") %>' />
+                <br />
+                player_totalyards:
+                <asp:TextBox ID="player_totalyardsTextBox" runat="server" Text='<%# Bind("player_totalyards") %>' />
+                <br />
+                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            </EditItemTemplate>
+            <InsertItemTemplate>
+
+
+
+                <table>
+                    <tr>
+                        <td style="text-align:right;">
+                            Player Name:
+                        </td>
+                        <td style="text-align:left;">
+                            <asp:TextBox ID="tb_playerName" runat="server" Text='<%# Bind("player_name") %>' />
+                        </td>
+                        <td>
+                            <asp:RequiredFieldValidator ID="rfv_playername" runat="server" ErrorMessage="You Must enter a player's name!" ControlToValidate="tb_playerName" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                            
+                    <tr>
+                        <td style="text-align:right;">
+                            Position:
+                        </td>
+                        <td style="text-align:left;">
+                            <asp:TextBox ID="tb_playerPosition" runat="server" Text='<%# Bind("player_position") %>' />
+                        </td>
+                        <td>
+                            <asp:RequiredFieldValidator ID="rfv_playerposition" runat="server" ErrorMessage="You Must enter a player's position!" ControlToValidate="tb_playerPosition" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="text-align:right;">
+                            NFL Team:
+                        </td>
+                        <td style="text-align:left;">
+                            <asp:TextBox ID="tb_Team" runat="server" Text='<%# Bind("player_team") %>' />
+                        </td>
+                        <td>
+                            <asp:RequiredFieldValidator ID="rfv_playerteam" runat="server" ErrorMessage="You Must enter a player's NFL Team!" ControlToValidate="tb_Team" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td  style="text-align:right;">
+                            Total Fantasy Points:
+                        </td>
+                        <td style="text-align:left;">
+                             <asp:TextBox ID="tb_totalPoints" runat="server" Text='<%# Bind("player_totalpoints") %>' />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td  style="text-align:right;">
+                            Average Fantasy Points:
+                        </td>
+                        <td style="text-align:left;">
+                             <asp:TextBox ID="tb_averagePoints" runat="server" Text='<%# Bind("player_avgpoints") %>' />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td  style="text-align:right;">
+                            Touchdowns:
+                        </td>
+                        <td style="text-align:left;">
+                             <asp:TextBox ID="tb_Touchdowns" runat="server" Text='<%# Bind("player_totaltouchdowns") %>' />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td  style="text-align:right;">
+                            Yards:
+                        </td>
+                        <td style="text-align:left;">
+                            <asp:TextBox ID="tb_Yards" runat="server" Text='<%# Bind("player_totalyards") %>' />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="text-align:right;">
+                           <asp:Button ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" /> 
+                        </td>
+                        <td style="text-align:left;">
+                            <asp:Button ID="Cancel" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                        </td>
+                    </tr>
+                </table>
+               
+            </InsertItemTemplate>
+           
+        </asp:FormView>
     
     </div>
     </form>

@@ -37,6 +37,7 @@
                 <asp:Parameter Name="playerID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
+        <asp:HyperLink ID="HyperLink1" runat="server" BackColor="Yellow" NavigateUrl="~/admin/NewPlayer.aspx">Add A New Player</asp:HyperLink>
         <br />
         <br />
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="playerID" DataSourceID="sql_playerFacts" Height="50px" Width="365px">
@@ -49,7 +50,7 @@
                 <asp:BoundField DataField="player_avgpoints" HeaderText="Average Fantasy Points" SortExpression="player_avgpoints" />
                 <asp:BoundField DataField="player_totaltouchdowns" HeaderText="Touchdowns" SortExpression="player_totaltouchdowns" />
                 <asp:BoundField DataField="player_totalyards" HeaderText="Yards" SortExpression="player_totalyards" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" ButtonType="Button" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ButtonType="Button" />
             </Fields>
         </asp:DetailsView>
     
