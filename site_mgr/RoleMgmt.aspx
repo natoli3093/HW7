@@ -18,7 +18,7 @@
                 <h3>Manage Roles:</h3>
 
                 Current Roles:<br />
-                <asp:ListBox ID="list_currentRoles" runat="server"></asp:ListBox>
+                <asp:ListBox ID="list_currentRoles" runat="server" Width="145px"></asp:ListBox>
                 <br />
                 <br />
                 <asp:Button ID="btn_deleteExistingRole" runat="server" Text="Delete An Existing Role" />

@@ -103,7 +103,7 @@
         <h3>Delete An Existing User</h3>
         <p>
 
-            <asp:ListBox ID="list_allUsers" runat="server"></asp:ListBox>
+            <asp:ListBox ID="list_allUsers" runat="server" Width="221px"></asp:ListBox>
             <br />
             <span class="label_format">
             <asp:Label ID="lbl_deletedUser" runat="server"></asp:Label>
