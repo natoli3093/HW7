@@ -1,10 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
-
-
-Partial Class Account_AddRole
+Partial Class site_mgr_RoleMgmt
     Inherits System.Web.UI.Page
-
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         If Not IsPostBack Then
@@ -18,8 +15,6 @@ Partial Class Account_AddRole
         End If
 
     End Sub
-
-
     Public Sub BindRoles()
 
 
@@ -47,7 +42,6 @@ Partial Class Account_AddRole
         list_allRoles.DataBind()
 
     End Sub
-
     Public Sub BindUsers()
 
         Dim queryString As String = "SELECT UserName FROM dbo.aspnet_Users"
@@ -70,7 +64,6 @@ Partial Class Account_AddRole
         list_allUsers.DataBind()
 
     End Sub
-
     Protected Sub btn_deleteExistingRole_Click(sender As Object, e As EventArgs) Handles btn_deleteExistingRole.Click
 
         lbl_roleMgmt.Text = ""
@@ -110,7 +103,6 @@ Partial Class Account_AddRole
         End Try
         Response.AddHeader("REFRESH", "2;URL=RoleMgmt.aspx")
     End Sub
-
     Protected Sub btn_AddUserToRole_Click(sender As Object, e As EventArgs) Handles btn_AddUserToRole.Click
 
         lbl_addUserToRole.Text = ""
@@ -132,7 +124,6 @@ Partial Class Account_AddRole
         Response.AddHeader("REFRESH", "2;URL=RoleMgmt.aspx")
 
     End Sub
-
     Protected Sub list_allUsers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles list_allUsers.SelectedIndexChanged
         Dim queryString As String = "SELECT aspnet_Roles.RoleName FROM aspnet_Roles INNER JOIN aspnet_UsersInRoles ON aspnet_Roles.RoleId = aspnet_UsersInRoles.RoleId INNER JOIN aspnet_Users ON aspnet_UsersInRoles.UserId = aspnet_Users.UserId WHERE aspnet_Users.UserName LIKE "
         Dim selectedUser As String = list_allUsers.SelectedItem.Text
@@ -151,7 +142,6 @@ Partial Class Account_AddRole
         list_rolesThisUserHas.DataBind()
 
     End Sub
-
     Protected Sub btn_removeRoleFromUser_Click(sender As Object, e As EventArgs) Handles btn_removeRoleFromUser.Click
 
         lbl_removeRoleFromUser.Text = ""
@@ -173,7 +163,6 @@ Partial Class Account_AddRole
         Response.AddHeader("REFRESH", "2;URL=RoleMgmt.aspx")
 
     End Sub
-
     Protected Sub list_allRoles_SelectedIndexChanged(sender As Object, e As EventArgs) Handles list_allRoles.SelectedIndexChanged
         Dim queryString As String = "SELECT aspnet_Users.Username FROM aspnet_Roles INNER JOIN aspnet_UsersInRoles ON aspnet_Roles.RoleId = aspnet_UsersInRoles.RoleId INNER JOIN aspnet_Users ON aspnet_UsersInRoles.UserId = aspnet_Users.UserId WHERE aspnet_Roles.RoleName Like "
         Dim selectedRole As String = list_allRoles.SelectedItem.Text
@@ -192,7 +181,6 @@ Partial Class Account_AddRole
         list_usersInThisRole.DataBind()
 
     End Sub
-
     Protected Sub btn_removeUserFromRole_Click(sender As Object, e As EventArgs) Handles btn_removeUserFromRole.Click
 
         lbl_removeRoleFromUser.Text = ""
@@ -216,5 +204,4 @@ Partial Class Account_AddRole
 
     End Sub
 
-   
 End Class

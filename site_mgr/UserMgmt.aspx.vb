@@ -1,9 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
-
-Partial Class site_mgr_AddNewUser
+Partial Class site_mgr_UserMgmt
     Inherits System.Web.UI.Page
-
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         If Not IsPostBack Then
@@ -11,12 +9,10 @@ Partial Class site_mgr_AddNewUser
 
             BindUsers()
             lbl_deletedUser.Text = String.Empty
-            
+
         End If
 
     End Sub
-
-
     Protected Sub CreateUserWizard1_CreatedUser(sender As Object, e As EventArgs) Handles CreateUserWizard1.CreatedUser
 
         Dim p As MembershipCreateStatus = MembershipCreateStatus.Success
@@ -25,7 +21,6 @@ Partial Class site_mgr_AddNewUser
         Response.Redirect("./RoleMgmt.aspx")
 
     End Sub
-
     Public Sub BindUsers()
 
         Dim queryString As String = "SELECT UserName FROM dbo.aspnet_Users"
@@ -42,10 +37,6 @@ Partial Class site_mgr_AddNewUser
         list_allUsers.DataBind()
 
     End Sub
-
-
-
-
     Protected Sub btn_deleteUser_Click(sender As Object, e As EventArgs) Handles btn_deleteUser.Click
 
         lbl_deletedUser.Text = ""
@@ -61,6 +52,5 @@ Partial Class site_mgr_AddNewUser
         Response.AddHeader("REFRESH", "2;URL=UserMgmt.aspx")
 
     End Sub
-
 
 End Class

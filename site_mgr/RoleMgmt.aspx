@@ -1,15 +1,10 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="xRoleMgmt.aspx.vb" Inherits="Account_AddRole" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/players.master" AutoEventWireup="false" CodeFile="RoleMgmt.aspx.vb" Inherits="site_mgr_RoleMgmt" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>ASP.NET Role Based Security - Role Manager</title>
-    <link rel="stylesheet" type="text/css" href="~/sitemanager.css" />
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+    <div>
 
             <asp:HyperLink ID="link_userManager" runat="server" NavigateUrl="~/site_mgr/UserMgmt.aspx">User Manager</asp:HyperLink>
 
@@ -77,9 +72,9 @@
             
                 <h3>Remove A Role From A User</h3>
 
-                <asp:ListBox ID="list_allUsers" runat="server" AutoPostBack="True"></asp:ListBox>
+                <asp:ListBox ID="list_allUsers" runat="server" AutoPostBack="True" Width="212px"></asp:ListBox>
 
-                <asp:ListBox ID="list_rolesThisUserHas" runat="server"></asp:ListBox>
+                <asp:ListBox ID="list_rolesThisUserHas" runat="server" Width="212px"></asp:ListBox>
 
                 <br />
                 <span class="label_format">
@@ -106,6 +101,5 @@
                 <br />
                 <asp:Button ID="btn_removeUserFromRole" runat="server" Text="Remove This User From This Role" />
             </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+

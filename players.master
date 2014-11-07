@@ -36,12 +36,13 @@
 
             <div id="menu">
             <ul id="nav">
-                <li><a href="./Default.aspx">Home</a></li>
-                <li><a href="./ViewAllPlayers.aspx">View All Players</a></li>
-                <li><a href="./Admin/Default.aspx">Admin</a></li>
-                <li><a href="./search.aspx">Search</a></li>
-                <li><a href="./AboutUs.aspx">About Us</a></li>
-                <li><a href="./ContactUs.aspx">Contact Us</a></li>
+                <li><asp:HyperLink ID="linkHome" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkView" runat="server" NavigateUrl="~/ViewAllPlayers.aspx">View All Players</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkAdmin" runat="server" NavigateUrl="~/admin/Default.aspx">Admin</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkSearch" runat="server" NavigateUrl="~/search.aspx">Search</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkAboutus" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink></li>
+                <li><asp:HyperLink ID="linkContactus" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink></li>
+                <li><asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
             </ul>
             </div>
 
