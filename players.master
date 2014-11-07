@@ -40,6 +40,8 @@
                 <li><a href="./ViewAllPlayers.aspx">View All Players</a></li>
                 <li><a href="./Admin/Default.aspx">Admin</a></li>
                 <li><a href="./search.aspx">Search</a></li>
+                <li><a href="./AboutUs.aspx">About Us</a></li>
+                <li><a href="./ContactUs.aspx">Contact Us</a></li>
             </ul>
             </div>
 

@@ -1,5 +1,5 @@
 ﻿
-Partial Class _Default
+Partial Class search
     Inherits System.Web.UI.Page
 
     Protected Sub tbPlayer_TextChanged(sender As Object, e As EventArgs) Handles tbPlayer.TextChanged
@@ -16,4 +16,5 @@ Partial Class _Default
         sql_playerFacts.SelectCommand = searchWord
 
     End Sub
+
 End Class

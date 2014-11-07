@@ -1,5 +1,5 @@
 ﻿
-Partial Class NewPlayer
+Partial Class AboutUs
     Inherits System.Web.UI.Page
 
 End Class

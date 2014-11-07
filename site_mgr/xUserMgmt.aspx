@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="UserMgmt.aspx.vb" Inherits="site_mgr_AddNewUser" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="xUserMgmt.aspx.vb" Inherits="site_mgr_AddNewUser" %>
 
 <!DOCTYPE html>
 

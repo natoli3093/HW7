@@ -1,13 +1,9 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="search.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/players.master" AutoEventWireup="false" CodeFile="search.aspx.vb" Inherits="search" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
     <div>
     
         <asp:SqlDataSource ID="sql_playerFacts" runat="server" ConnectionString="Data Source=apollo.biz.uiowa.edu;Initial Catalog=msci3300_g4;Persist Security Info=True;User ID=msci3300_g4;Password=pAssw0rd!#" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [natoli_HW7]"></asp:SqlDataSource>
@@ -39,6 +35,5 @@
         <% End If%>
     
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+
