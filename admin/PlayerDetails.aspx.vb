@@ -7,7 +7,9 @@ Partial Class admin_PlayerDetails
 
         lbl_deletedPlayer.Text = deletedPlayer & " has been deleted from the ESPN Fantasy database."
 
-        Response.Redirect("./ViewAllPlayers.aspx")
+        Response.AddHeader("REFRESH", "3:URL=./ViewAllPlayers.aspx")
+
+
 
     End Sub
 
