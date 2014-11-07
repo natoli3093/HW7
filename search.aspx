@@ -21,7 +21,7 @@
         <asp:TextBox ID="tbAnotherplayer" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="playerID" DataSourceID="sql_playerFacts">
+        <asp:GridView ID="GridView1" CssClass="gridview" runat="server" AutoGenerateColumns="False" DataKeyNames="playerID" DataSourceID="sql_playerFacts" Width="871px">
             <Columns>
                 <asp:BoundField DataField="player_name" HeaderText="Player Name" SortExpression="player_name" />
                 <asp:BoundField DataField="player_position" HeaderText="Position" SortExpression="player_position" />

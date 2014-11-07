@@ -32,7 +32,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
-        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="playerID" DataSourceID="sql_playerFacts">
+        <asp:GridView ID="GridView1" CssClass="gridview" AlternatingRowStyle-CssClass="alt" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="playerID" DataSourceID="sql_playerFacts" Width="583px">
             <Columns>
                 <asp:BoundField DataField="player_name" HeaderText="Player Name" SortExpression="player_name" />
                 <asp:BoundField DataField="player_team" HeaderText="NFL Team" SortExpression="player_team" />

@@ -57,6 +57,8 @@
 
     <div id="footer">
         &copy; 2014 MSCI:3300 - Software Design and Development
+        <asp:Label ID="lbl_date" runat="server" Text="lbl_date"></asp:Label>
+&nbsp;<asp:Label ID="lbl_time" runat="server" Text="lbl_time"></asp:Label>
     </div>
 
     </div>
