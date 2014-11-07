@@ -92,6 +92,8 @@ h3 {font-family: Arial, Helvetica, sans-serif; font-variant: small-caps;}
 
 .detailsview{margin:auto; font-family: Georgia, serif; border-color:black;border-style:solid; border-width:5px;}
 
+.fieldheader{background-color:#FF8C00}
+
 .header{color:black;margin-left:auto; margin-right:auto; background-color:#FF8C00; color:black; border-width:2px; border-color:black;border-style:solid;}
 
 

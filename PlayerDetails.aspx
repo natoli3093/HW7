@@ -13,7 +13,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <asp:DetailsView ID="DetailsView1" CssClass="detailsview" HeaderStyle-CssClass="header" AlternatingRowStyle-CssClass="altrow"
+        <asp:DetailsView ID="DetailsView1" CssClass="detailsview" FieldHeaderStyle-CssClass="fieldheader" AlternatingRowStyle-CssClass="altrow"
             runat="server" AutoGenerateRows="False" DataKeyNames="playerID" DataSourceID="sql_playerFacts" Height="50px" Width="365px">
             <Fields>
                 <asp:BoundField DataField="playerID" HeaderText="Player ID" InsertVisible="False" ReadOnly="True" SortExpression="playerID" />
